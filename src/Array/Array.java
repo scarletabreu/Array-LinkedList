@@ -8,11 +8,9 @@ public class Array {
                 Object temp = arr[ind];
                 arr[ind] = arr[ind-1];
                 arr[ind-1] = temp;
-            }
-            for (int ind = arr.length-1; ind > arr.length/2; ind--) {
-                Object temp = arr[ind];
-                arr[ind] = arr[ind-1];
-                arr[ind-1] = temp;
+                Object temp1 = arr[ind + arr.length/2];
+                arr[ind + arr.length/2] = arr[ind + arr.length/2 -1];
+                arr[ind + arr.length/2 - 1] = temp1;
             }
         }
     }
